@@ -13,56 +13,108 @@
         overflow: hidden;
         background-image: url('./images/background.png');
         height: 100vh;
-        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
       }
-      /* input[type='text'] {
+
+      #container {
+        display: flex;
+        width: 500px;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      #text {
+        display: flex;
+        align-items: center;
         width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
+        justify-content: center;
+      }
+
+      #text img {
+        width: 479px;
+      }
+
+      #form {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: wrap;
+        padding: 10px;
+      }
+
+      #nameForm {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        gap: 10px;
+
+        width: 334px;
+        height: 58px;
+
+        border-radius: 20px 20px 20px 20px;
+
+        /* Inside auto layout */
+        background: #131313;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+      }
+
+      input[type='text'] {
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
+        background-color: #eee;
         border-radius: 4px;
-      }
-      input[type='submit'] {
-        width: 100%;
-        background-color: #4caf50;
+        font-size: 24px;
         color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
+        background-color: transparent;
       }
-      input[type='submit']:hover {
-        background-color: #45a049;
+
+      .no-outline:focus {
+        outline: none;
       }
-      div {
-        border-radius: 5px;
-        background-color: #f2f2f2;
-        padding: 20px;
+
+      @media (max-width: 515px) {
+        #text img {
+          width: 100%;
+        }
+        #container {
+          width: 100%;
+        }
       }
-      p {
-        font-size: 18px;
-      } */
     </style>
   </head>
   <body>
-    <h2>Enter your name</h2>
+    <div id="container">
+      <div id="text">
+        <img src="./images/id1.png" />
+      </div>
 
-    <div>
-      <form id="nameForm">
-        <label for="name">Name (Lastname, F):</label>
-        <input type="text" id="name" name="name" />
-        <input type="submit" value="Submit" />
-      </form>
+      <div id="form">
+        <form id="nameForm">
+          <input type="text" class="no-outline" id="name" name="name" />
+          <input type="submit" value="->" />
+        </form>
+      </div>
     </div>
 
     <p id="output"></p>
 
     <script>
-      /* const names = {
-        'Doe, J': 'John Doe',
-        'Smith, J': 'Jane Smith',
+      const names = {
+        'Doe, J': 'WOAH, you are invited John Doe',
+        'Smith, J': 'WOAH, you are invited Jane Smith',
       };
 
       document
@@ -77,7 +129,7 @@
           } else {
             document.getElementById('output').innerHTML = 'Name not found';
           }
-        }); */
+        });
     </script>
   </body>
 </html>
