@@ -12,7 +12,7 @@
   flex-direction: row;
   background: #000000;
   border: 7px solid #ffffff;
-  height: 140px;
+  height: 120px;
   width: 100%;
 }
 
@@ -29,8 +29,16 @@
 }
 
 .dialog-field {
+  display: flex;
   height: 100%;
   flex-grow: 12;
+  padding-top: 15px;
+}
+
+.dialog-text {
+  font-family: 'VT323', monospace;
+  color: white;
+  font-size: 25px;
 }
 
 /* .dialog-container {
