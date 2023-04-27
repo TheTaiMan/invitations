@@ -48,36 +48,6 @@
           <input type="submit" class="form-btn" value="SEND" />
         </form>
       </main>
-      <!--
-      <div id="form">
-        <form id="nameForm">
-          <input type="text" class="no-outline" id="name" name="name" />
-          <input type="submit" value="->" />
-        </form>
-      </div> -->
     </div>
-
-    <p id="output"></p>
-
-    <script>
-      const names = {
-        'Doe, J': 'WOAH, you are invited John Doe',
-        'Smith, J': 'WOAH, you are invited Jane Smith',
-      };
-
-      document
-        .getElementById('nameForm')
-        .addEventListener('submit', function (event) {
-          event.preventDefault();
-
-          const name = document.getElementById('name').value;
-
-          if (names[name]) {
-            document.getElementById('output').innerHTML = names[name];
-          } else {
-            document.getElementById('output').innerHTML = 'Name not found';
-          }
-        });
-    </script>
   </body>
 </html>
