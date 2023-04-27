@@ -1,0 +1,40 @@
+.dialog-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 25px;
+}
+
+.dialog-box {
+  display: flex;
+  flex-direction: row;
+  background: #000000;
+  border: 7px solid #ffffff;
+  height: 140px;
+  width: 100%;
+}
+
+.dialog-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.dialog-icon img {
+  width: 80%;
+}
+
+.dialog-field {
+  height: 100%;
+  flex-grow: 12;
+}
+
+/* .dialog-container {
+  width: 100%;
+  font-family: 'VT323', monospace;
+}
+ */

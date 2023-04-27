@@ -1,0 +1,43 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Set default font family and font size */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+}
+
+/* Remove border on images inside links */
+a img {
+  border: none;
+}
