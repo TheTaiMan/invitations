@@ -8,13 +8,14 @@
       href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
       rel="stylesheet"
     />
-    <link href="./styles/background.css" rel="stylesheet" type="text/css" />
     <link href="./styles/reset.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/background.css" rel="stylesheet" type="text/css" />
     <link href="./styles/dialog.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/input.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div class="body-container">
-      <div class="dialog-container">
+      <header>
         <div class="dialog-box">
           <div class="dialog-icon">
             <img src="./images/guy.png" />
@@ -23,12 +24,27 @@
             <p class="dialog-text">*</p>
             <span>⠀</span>
             <p class="dialog-text" id="dialog-content">
+              <!-- Edit this in JS to change content -->
               Can I see some ID?aaaaa
             </p>
           </div>
         </div>
-        <!-- <img src="./images/id1.png" /> -->
-      </div>
+      </header>
+      <main>
+        <form id="nameForm">
+          <img src="./images/inputIcon.png" />
+          <input
+            autocomplete="off"
+            type="text"
+            class="no-outline"
+            id="name"
+            name="name"
+            placeholder="First Name..."
+            oninput="this.value = this.value.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})"
+          />
+          <input type="submit" class="form-btn" value="SEND" />
+        </form>
+      </main>
       <!--
       <div id="form">
         <form id="nameForm">

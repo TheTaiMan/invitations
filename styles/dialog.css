@@ -1,4 +1,4 @@
-.dialog-container {
+header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,7 +10,7 @@
 .dialog-box {
   display: flex;
   flex-direction: row;
-  background: #000000;
+  background: #131313;
   border: 7px solid #ffffff;
   height: 120px;
   width: 100%;
@@ -40,9 +40,3 @@
   color: white;
   font-size: 25px;
 }
-
-/* .dialog-container {
-  width: 100%;
-  font-family: 'VT323', monospace;
-}
- */
