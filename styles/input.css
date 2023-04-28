@@ -7,6 +7,9 @@ main {
 
 main form {
   display: flex;
+
+  visibility: visible; /* Change this */
+
   min-width: 345px;
   height: 60px;
   align-items: center;
