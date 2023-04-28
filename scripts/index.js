@@ -1,3 +1,5 @@
+import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+
 class Dialog {
   constructor(dialog, click) {
     this.click = click;
@@ -34,15 +36,39 @@ class Dialog {
         document.getElementById('name').focus();
       }, 1100);
     } else {
-      const jsConfetti = new JSConfetti();
-      jsConfetti.addConfetti();
+      const end = Date.now() + 15 * 1000;
+
+      // go Buckeyes!
+      const colors = ['#00000', '#047940'];
+
+      (function frame() {
+        confetti({
+          particleCount: 2,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: colors,
+        });
+
+        confetti({
+          particleCount: 2,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: colors,
+        });
+
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      })();
     }
   }
   checking() {}
 }
 
-const handleClick = (event) => {
-  document.getElementById('nameForm').style.visibility = 'hidden';
+document.getElementById('send-btn').onclick = (event) => {
+  document.getElementById('nameForm').style.display = 'none';
   const name = document.getElementById('name').value;
   const dialog = new Dialog(
     [
@@ -50,8 +76,8 @@ const handleClick = (event) => {
       'Checking...',
       'nods..',
       `So you are ${name}, eh.`,
-      'It looks like your on the list after all.',
-      'Welcome!',
+      'It looks like your on the invitation list after all.',
+      'Welcome! Here is where you can buy your tickets.🎟️',
     ],
     true
   );
