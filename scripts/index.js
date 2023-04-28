@@ -50,6 +50,10 @@ class Dialog {
     this.dialogIndex++;
   }
   end() {
+    document.getElementById('nameForm').classList.add('bounce-in-top');
+    setTimeout(() => {
+      document.getElementById('name').focus();
+    }, 1100);
   }
 }
 
