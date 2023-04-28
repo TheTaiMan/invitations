@@ -1,29 +1,7 @@
-/* const names = {
-  'Doe, J': 'WOAH, you are invited John Doe',
-  'Smith, J': 'WOAH, you are invited Jane Smith',
-};
-
-document
-  .getElementById('nameForm')
-  .addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    const name = document.getElementById('name').value;
-
-    if (names[name]) {
-      document.getElementById('output').innerHTML = names[name];
-    } else {
-      document.getElementById('output').innerHTML = 'Name not found';
-    }
-  }); */
-
 class Dialog {
-  constructor() {
-    this.dialog = [
-      'WOah, hold on there!',
-      'Are you on the list?',
-      'Let me see some ID.',
-    ];
+  constructor(dialog, click) {
+    this.click = click;
+    this.dialog = dialog;
     this.dialogIndex = 0;
     this.text = '';
     this.textIndex = 0;
@@ -50,14 +28,40 @@ class Dialog {
     this.dialogIndex++;
   }
   end() {
-    document.getElementById('nameForm').classList.add('bounce-in-top');
-    setTimeout(() => {
-      document.getElementById('name').focus();
-    }, 1100);
+    if (!this.click) {
+      document.getElementById('nameForm').classList.add('bounce-in-top');
+      setTimeout(() => {
+        document.getElementById('name').focus();
+      }, 1100);
+    } else {
+      const jsConfetti = new JSConfetti();
+      jsConfetti.addConfetti();
+    }
   }
+  checking() {}
 }
 
+const handleClick = (event) => {
+  document.getElementById('nameForm').style.visibility = 'hidden';
+  const name = document.getElementById('name').value;
+  const dialog = new Dialog(
+    [
+      'checking...',
+      'Checking...',
+      'nods..',
+      `So you are ${name}, eh.`,
+      'It looks like your on the list after all.',
+      'Welcome!',
+    ],
+    true
+  );
+  dialog.set();
+};
+
 window.addEventListener('load', (event) => {
-  const dialog = new Dialog();
+  const dialog = new Dialog(
+    ['WOah, hold on there!', 'Are you on the list?', 'Let me see some ID.'],
+    false
+  );
   dialog.set();
 });

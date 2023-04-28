@@ -21,7 +21,7 @@ header {
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 90px;
+  min-width: 90px !important;
 }
 
 .dialog-icon img {

@@ -46,7 +46,14 @@
             placeholder="First Name..."
             oninput="this.value = this.value.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})"
           />
-          <input type="submit" class="form-btn" value="SEND" />
+          <button
+            id="send-btn"
+            class="form-btn"
+            type="button"
+            onclick="handleClick()"
+          >
+            SEND
+          </button>
         </form>
       </main>
     </div>
