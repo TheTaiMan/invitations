@@ -62,6 +62,7 @@ class Dialog {
           requestAnimationFrame(frame);
         }
       })();
+      document.getElementById('shop').style.display = 'flex';
     }
   }
   checking() {}
@@ -82,6 +83,10 @@ document.getElementById('send-btn').onclick = (event) => {
     true
   );
   dialog.set();
+};
+
+document.getElementById('buy').onclick = (event) => {
+  window.open('https://mur.inviteright.com/Murdoch2023Grad');
 };
 
 window.addEventListener('load', (event) => {

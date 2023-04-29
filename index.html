@@ -16,7 +16,7 @@
     <link href="./styles/dialog.css" rel="stylesheet" type="text/css" />
     <link href="./styles/input.css" rel="stylesheet" type="text/css" />
     <link href="./styles/shop.css" rel="stylesheet" type="text/css" />
-    <!-- <script src="./scripts/index.js" type="module"></script> -->
+    <script src="./scripts/index.js" type="module"></script>
   </head>
   <body>
     <div id="tsparticles"></div>
@@ -37,7 +37,7 @@
         </div>
       </header>
       <main>
-        <!-- <form id="nameForm">
+        <form id="nameForm">
           <img src="./images/inputIcon.png" />
           <input
             autocomplete="off"
@@ -56,13 +56,15 @@
           >
             SEND
           </button>
-        </form> -->
-        <div class="shop">
+        </form>
+
+        <div id="shop" class="shop slide-in-blurred-top">
           <h1>Shop</h1>
           <!-- Shop -->
           <div class="menu">
             <section class="shop-item">
               <figure>
+                <img src="./images/sale.svg" class="sale" />
                 <!-- The Ticket -->
                 <img class="ticket" src="./images/tickets.png" />
               </figure>
@@ -75,7 +77,7 @@
                   you'll feast like royalty and dance the night away.
                 </p>
               </article>
-              <button>BUY</button>
+              <button id="buy">BUY</button>
             </section>
             <aside class="shop-details">
               <section class="location">
