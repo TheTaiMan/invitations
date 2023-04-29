@@ -1,6 +1,4 @@
 .shop {
-  display: flex;
-
   display: none;
 
   flex-direction: column;
