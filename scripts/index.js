@@ -16,7 +16,7 @@ class Dialog {
         this.textIndex
       );
       this.textIndex++;
-      setTimeout(this.render, 80);
+      setTimeout(this.render, 40);
     }
   }
   set() {
@@ -25,7 +25,7 @@ class Dialog {
     this.text = this.dialog[this.dialogIndex];
     setTimeout(() => {
       document.getElementById('dialog-content').innerHTML = '';
-      setTimeout(this.render, 1000);
+      setTimeout(this.render, 600);
     }, 1000);
     this.dialogIndex++;
   }
@@ -73,9 +73,6 @@ document.getElementById('send-btn').onclick = (event) => {
   const name = document.getElementById('name').value;
   const dialog = new Dialog(
     [
-      'checking...',
-      'Checking...',
-      'nods..',
       `So you are ${name}, eh.`,
       'It looks like your on the invitation list after all.',
       'Welcome! Here is where you can buy your tickets.🎟️',
@@ -86,7 +83,7 @@ document.getElementById('send-btn').onclick = (event) => {
 };
 
 document.getElementById('buy').onclick = (event) => {
-  window.open('https://mur.inviteright.com/Murdoch2023Grad');
+  window.location.href = "mailto:jblazek@retsd.mb.ca";
 };
 
 window.addEventListener('load', (event) => {
