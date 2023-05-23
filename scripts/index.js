@@ -88,7 +88,7 @@ document.getElementById('buy').onclick = (event) => {
 
 window.addEventListener('load', (event) => {
   const dialog = new Dialog(
-    ['WOah, hold on there!', 'Are you on the list?', 'Let me see some ID.'],
+    ['Woah, hold on there!', 'Are you on the list?', 'Let me see some ID.'],
     false
   );
   dialog.set();
