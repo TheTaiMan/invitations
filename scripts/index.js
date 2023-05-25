@@ -74,7 +74,7 @@ document.getElementById('send-btn').onclick = (event) => {
   const dialog = new Dialog(
     [
       `So you are ${name}, eh.`,
-      'It looks like you/'re on the invitation list after all.',
+      "It looks like you're on the invitation list after all." ,
       'Welcome! Here is where you can buy your tickets.🎟️',
     ],
     true
