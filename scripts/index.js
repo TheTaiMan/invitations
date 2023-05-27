@@ -74,8 +74,8 @@ document.getElementById('send-btn').onclick = (event) => {
   const dialog = new Dialog(
     [
       `So you are ${name}, eh.`,
-      "It looks like you're on the invitation list after all." ,
-      'Welcome! Here is where you can buy your tickets.🎟️',
+      "It looks like you're on the invitation list after all.",
+      'Welcome! The tickets are $55 cash payable to Ms. Fil or Ms. Blazek.',
     ],
     true
   );
@@ -83,7 +83,7 @@ document.getElementById('send-btn').onclick = (event) => {
 };
 
 document.getElementById('buy').onclick = (event) => {
-  window.location.href = "mailto:jblazek@retsd.mb.ca";
+  window.location.href = 'mailto:jblazek@retsd.mb.ca';
 };
 
 window.addEventListener('load', (event) => {
